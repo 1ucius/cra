@@ -1,0 +1,17 @@
+{
+  "main.css": "/cra/static/css/main.3e89ff6c.chunk.css",
+  "main.js": "/cra/static/js/main.ddefd893.chunk.js",
+  "main.js.map": "/cra/static/js/main.ddefd893.chunk.js.map",
+  "static/js/1.64c58341.chunk.js": "/cra/static/js/1.64c58341.chunk.js",
+  "static/js/1.64c58341.chunk.js.map": "/cra/static/js/1.64c58341.chunk.js.map",
+  "runtime~main.js": "/cra/static/js/runtime~main.2e0a8bf7.js",
+  "runtime~main.js.map": "/cra/static/js/runtime~main.2e0a8bf7.js.map",
+  "static/media/logo.svg": "/cra/static/media/logo.02d30e17.svg",
+  "static/media/pause.svg": "/cra/static/media/pause.07100aab.svg",
+  "static/media/volume.svg": "/cra/static/media/volume.69de45ca.svg",
+  "static/media/play.svg": "/cra/static/media/play.5004d330.svg",
+  "static/css/main.3e89ff6c.chunk.css.map": "/cra/static/css/main.3e89ff6c.chunk.css.map",
+  "index.html": "/cra/index.html",
+  "precache-manifest.94dd099e6560842ccbe236af341c4152.js": "/cra/precache-manifest.94dd099e6560842ccbe236af341c4152.js",
+  "service-worker.js": "/cra/service-worker.js"
+}
