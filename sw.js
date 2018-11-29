@@ -3,23 +3,19 @@ var doCache = false; //true for prod
 var CACHE_NAME = 'my-pwa-cache-v1';
 
 var urlsToCache = [
-  '/service-worker-custom.js'
-  // '/static/css/main.e3b0434b.chunk.css',
-  // '/static/js/1.f29157c7.chunk.js',
-  // '/static/js/main.2ecfbce2.chunk.js',
-  // '/static/js/main.2ecfbce2.chunk.js',
-  // '/static/media/pause.07100aab.svg',
-  // '/static/media/logo.02d30e17.svg',
-  // '/static/media/play.5004d330.svg',
-  // '/static/media/play.5004d330.svg'
-];
+  './favicons/favicon.ico',
+  './index.html',
+  './sw.js',
+  './manifest.json'
+].concat(self.__precacheManifest || []);
 
 
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('Opened and caching files');
+        // Open a cache and cache our files
+        console.log('My custom service worker');
         return cache.addAll(urlsToCache);
       })
   );
