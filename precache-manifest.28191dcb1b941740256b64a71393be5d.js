@@ -20,19 +20,19 @@ self.__precacheManifest = [
     "url": "/cra/static/js/runtime~main.2e0a8bf7.js"
   },
   {
-    "revision": "4013593b1cf4fadd0997",
-    "url": "/cra/static/js/main.4013593b.chunk.js"
+    "revision": "616134c2307a276372b2",
+    "url": "/cra/static/js/main.616134c2.chunk.js"
   },
   {
     "revision": "f29157c7d2a26d06b8eb",
     "url": "/cra/static/js/1.f29157c7.chunk.js"
   },
   {
-    "revision": "4013593b1cf4fadd0997",
+    "revision": "616134c2307a276372b2",
     "url": "/cra/static/css/main.c5a346fe.chunk.css"
   },
   {
-    "revision": "3d9da240f3095472885367a426e1199f",
+    "revision": "e02b88a7d7889a469790b00ebeaf3841",
     "url": "/cra/index.html"
   }
 ];
