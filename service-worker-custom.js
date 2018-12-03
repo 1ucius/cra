@@ -12,31 +12,42 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 //     /\.(?:js|css|html|img|svg)$/
 // ]);
 
-workbox.routing.registerRoute(
-    'https://tools.planetradio.co.uk/core/podcasts/rss.php?name=radio-1-norge',
-    workbox.strategies.cacheFirst()
-)
+
+
+workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 
 workbox.routing.registerRoute(
-    /\.(?:js|css|html|img|svg)$/,
-    workbox.strategies.cacheFirst({
+    /\.(?:js|css|html|img|svg|json)$/,
+    workbox.strategies.networkFirst({
         cacheName: 'static-resources'
     })
 )
 
 workbox.routing.registerRoute(
-    new RegExp('^https://assets.planetradio.co.uk/audio-on-demand/radio-1-norge/'),
+    new RegExp('^https://tools.planetradio.co.uk/core/podcasts/rss.php'),
     workbox.strategies.cacheFirst({
-      cacheName: 'images-cache',
-      plugins: [
-        new workbox.cacheableResponse.Plugin({
-          statuses: [0, 200],
-        })
-      ]
+        cacheName: 'appdata-cache',
+        plugins: [
+            new workbox.cacheableResponse.Plugin({
+                statuses: [0, 200],
+            })
+        ]
     })
-  );
+);
 
 workbox.routing.registerRoute(
-    'http://localhost:3000',
+    new RegExp('^https://assets.planetradio.co.uk/audio-on-demand/radio-1-norge/'),
+    workbox.strategies.cacheFirst({
+        cacheName: 'images-cache',
+        plugins: [
+            new workbox.cacheableResponse.Plugin({
+                statuses: [0, 200],
+            })
+        ]
+    })
+);
+
+workbox.routing.registerRoute(
+    '/',
     workbox.strategies.cacheFirst()
 )
