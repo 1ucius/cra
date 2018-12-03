@@ -30,7 +30,10 @@ workbox.routing.registerRoute(
         plugins: [
             new workbox.cacheableResponse.Plugin({
                 statuses: [0, 200],
-            })
+            }),
+            new workbox.expiration.Plugin({
+                maxAgeSeconds: 7 * 24 * 60 * 60,
+            }),
         ]
     })
 );
@@ -42,7 +45,10 @@ workbox.routing.registerRoute(
         plugins: [
             new workbox.cacheableResponse.Plugin({
                 statuses: [0, 200],
-            })
+            }),
+            new workbox.expiration.Plugin({
+                maxAgeSeconds: 7 * 24 * 60 * 60,
+            }),
         ]
     })
 );
