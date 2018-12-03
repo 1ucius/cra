@@ -26,7 +26,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
     new RegExp('^https://tools.planetradio.co.uk/core/podcasts/rss.php'),
     workbox.strategies.cacheFirst({
-        cacheName: 'appdata-cache',
+        // cacheName: 'appdata-cache',
         plugins: [
             new workbox.cacheableResponse.Plugin({
                 statuses: [0, 200],
@@ -38,7 +38,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
     new RegExp('^https://assets.planetradio.co.uk/audio-on-demand/radio-1-norge/'),
     workbox.strategies.cacheFirst({
-        // cacheName: 'images-cache',
+        cacheName: 'images-cache',
         plugins: [
             new workbox.cacheableResponse.Plugin({
                 statuses: [0, 200],
