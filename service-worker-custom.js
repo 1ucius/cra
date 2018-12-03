@@ -48,6 +48,6 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-    '/',
+    'https://1ucius.github.io/cra/',
     workbox.strategies.cacheFirst()
 )
