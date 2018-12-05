@@ -6,7 +6,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 //     console.log(`Boo! Workbox didn't load 😬`);
 // }
 
-// workbox.setConfig({debug: false});
+workbox.setConfig({debug: false});
 
 // workbox.precaching.precache([
 //     /\.(?:js|css|html|img|svg)$/
@@ -75,7 +75,7 @@ workbox.routing.registerRoute(
 ); 
 
 workbox.routing.registerRoute(
-    // '/',
+    //'/',
     'https://1ucius.github.io/cra/',
     workbox.strategies.cacheFirst()
 )
