@@ -1,0 +1,109 @@
+.App
+    // background-color: $maingrey
+    // background-image: linear-gradient(to right bottom, #fe970f, #e35957, #98426d, #453554, #1a1b1d);
+    // background-image: radial-gradient(circle, #fe970f, #e35957, #98426d, #453554, #1a1b1d); circle
+    background-image: linear-gradient(to left top, #000000, #472024, #8c3b32, #cc622f, #fe970f);
+    // background: #355C7D;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    // background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    // background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+
+
+
+.container
+    width: 85%
+    margin: 0 auto
+
+.radio
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: center
+    min-height: 100vh
+    padding: 125px 0 
+
+    &__header,
+    &__player-wrap
+        width: 100vw
+        position: fixed
+        z-index: 100
+        left: 0
+        background-color: $darkgrey
+
+    &__header
+        top: 0
+        box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.75)
+
+    &__player-wrap
+        bottom: 0
+        box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.75)
+        opacity: 0
+        transform: translateY(100%)
+        visibility: hidden
+        transition: transform .3s ease, opacity .3s ease
+
+        &_active
+            visibility: visible
+            opacity: 1
+            transform: translateY(0)
+
+    &__recent,
+    &__all
+        width: 100%
+
+    &__recent
+        transition: transform .3s ease, opacity .3s ease
+
+        &_hidden
+            transform: scaleY(0)
+            opacity: 0
+
+
+    &__title
+        width: 100%
+        color: $white
+        padding: 20px 0
+    
+    &__wrap
+        max-width: 2000px
+        width: 100%
+        display: grid
+        justify-content: space-between
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+        grid-gap: 2vw
+        padding: 0 20px
+
+        &_latest
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+
+.load
+    color: #fff
+    white-space: nowrap
+    border: 2px solid $orange
+    background-color: $orange
+    line-height: 40px
+    font-size: 20px
+    padding: 0 20px
+    margin-top: 50px
+    transition: color .3s ease, background-color .3s ease
+
+    &:hover
+        color: $orange
+        background-color: transparent
+
+.logo
+    min-height: 100%
+    width: 150px
+    display: flex
+    align-items: center
+    padding: 20px 0
+
+    &__link
+        display: block
+
+    &__img
+        display: block
+        width: 100%

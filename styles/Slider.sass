@@ -1,0 +1,89 @@
+.slider
+    display: block
+    height: 3px
+    position: relative
+    top: 0
+    left: 0
+    width: 100%
+    user-select: none
+
+    &__bar
+        display: block
+        width: 100%
+        height: 100%
+        position: relative
+        z-index: 10
+        background-color: lighten($darkgrey, 10%)
+        cursor: pointer
+        transition: transform .3s ease
+        will-change: transform
+
+        &:before
+            content: ''
+            display: block
+            width: 100%
+            height: 20px
+            position: absolute
+            z-index: -1
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+    &__cur,
+    &__buffered
+        display: block
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        border-radius: 10px
+
+    &__cur
+        background-color: $orange
+        z-index: 2
+        transition: width .3s ease
+        
+    
+    &__buffered
+        background-color: lighten($darkgrey, 30%)
+        z-index: 1
+    
+    &__drag
+        border-radius: 50%
+        background-color: $orange
+        position: absolute
+        z-index: 3
+        top: 50%
+        left: 0
+        transform: translate(-50%, -50%)
+        transition: transform .3s ease, left .3s ease
+    
+    &__range
+        width: 100%
+        display: flex
+        justify-content: space-between
+        position: absolute
+        bottom: -20px
+        color: rgba($white, .8)
+
+        &-cur,
+        &-length
+            padding: 0 2px
+
+    &_autohide
+        opacity: 0
+        pointer-events: none
+        transition: opacity .3s ease
+    
+    &_dragging
+        opacity: 1
+        pointer-events: all
+
+        .slider
+
+            &__cur
+                transition: none
+            
+            &__drag
+                transform: translate(-50%, -50%) scale(1.2)
+                transition: transform .3s ease

@@ -1,0 +1,99 @@
+.podcast
+    position: relative
+    overflow: hidden
+    cursor: pointer
+    transform: scale(.4)
+    opacity: 0
+    visibility: hidden
+    user-select: none
+    will-change: transform
+    transition: transform 0s linear, opacity 0s linear
+
+
+    &_shown
+        transform: scale(1)
+        opacity: 1
+        visibility: visible
+        transition: transform .3s ease, opacity .3s ease
+
+
+    &_recent
+        border-color: $white
+
+    &:hover
+        border-color: rgba($orange, .5)
+
+        .podcast
+
+            &__title
+                color: $orange
+                text-shadow: 0px 0px 1px $darkgrey;
+            
+            &__desc
+                opacity: 1
+                transform: translateY(0)
+
+    &_active
+        border-color: $orange
+
+        .podcast
+
+            &__title
+                color: $darkgrey
+                text-shadow: 0px 0px 1px $darkgrey;
+            
+            &__desc
+                opacity: 0
+                transform: translateY(50%)
+        
+        &:hover
+            border-color: $orange
+
+    &__cover
+        display: inline-block
+        width: 100%
+        padding-bottom: 100%
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        overflow: hidden
+        border-radius: 10px
+
+    &__wrapper
+        padding: 5px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        line-height: 1.1
+
+
+    &__title,
+    &__desc
+        display: block
+        width: 100%
+    
+    &__title
+        color: $white
+        transition: color .3s ease
+
+        p
+            padding: 2px
+
+    &__desc
+        min-height: 50%
+        padding: 15px
+        border-top-left-radius: 3px
+        border-top-right-radius: 3px
+        color: $white
+        background-color: rgba($darkgrey, .95)
+        transform: translateY(50%)
+        opacity: 0
+        transition: opacity .3s ease, transform .3s ease
+
+    &__overlay
+        width: 85%
+        background-color: $darkgrey
+        height: 80px
+        padding-top: 20px
+        position: relative
