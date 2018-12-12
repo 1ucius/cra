@@ -1,0 +1,45 @@
+{
+  "name": "radio1",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://1ucius.github.io/cra/",
+  "dependencies": {
+    "cra-append-sw": "^2.6.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^5.1.1",
+    "react-scripts": "2.1.1",
+    "react-xml-parser": "^1.0.8",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "xml-js": "^1.6.8",
+    "xml2json": "^0.11.2"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm rum build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "git-push": "^0.1.1",
+    "node-sass": "^4.10.0",
+    "react-app-rewired": "^1.6.2",
+    "react-stack-grid": "^0.7.1",
+    "sass-loader": "^7.1.0",
+    "sw-precache": "^5.2.1",
+    "xml2js": "^0.4.19"
+  }
+}
